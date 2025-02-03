@@ -1088,10 +1088,8 @@ section.endorsements {
   padding-bottom: 0;
 }
 
-@media (max-width: 992px) {
-  .endorsements .container {
-    padding: 30px;
-  }
+.endorsements .container {
+  padding: 18px;
 }
 
 .endorsements .content h3 {

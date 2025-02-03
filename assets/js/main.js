@@ -108,7 +108,6 @@
  * Endorsement list slider
  */
   new Swiper('.endorsement-list-slider', {
-    speed: 600,
     loop: true,
     autoplay: {
       delay: 5000,
@@ -125,12 +124,12 @@
         slidesPerView: 1,
         spaceBetween: 20
       },
-
       1200: {
         slidesPerView: 3,
         spaceBetween: 20
       }
-    }
+    },
+    cssMode: true
   });
 
   /**
