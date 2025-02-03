@@ -603,7 +603,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 40px 0;
   scroll-margin-top: 98px;
   overflow: clip;
 }
@@ -621,7 +621,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -791,6 +791,7 @@ section,
 }
 
 .about .content h2 {
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -895,34 +896,19 @@ section,
   }
 }
 
-@media (max-width: 1199px) {
-  .about .content .read-more {
-    display: none;
-  }
-
-  .about .content h3 {
-    margin-top: 0 !important;
-  }
-}
-
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
 .features .features-item {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-top: 10px;
 }
 
 .features .features-item+.features-item {
-  margin-top: 100px;
+  border-top: dotted lightgray 1px;
 }
 
-@media (max-width: 768px) {
-  .features .features-item+.features-item {
-    margin-top: 20px;
-  }
-}
-
-.features .features-item h3 {
+</style>.features .features-item h3 {
   font-weight: 700;
   font-size: 26px;
 }
@@ -1100,10 +1086,6 @@ section,
 section.endorsements {
   background-color: var(--gray-background-color);
   padding-bottom: 0;
-}
-
-.endorsements .section-title {
-  padding-bottom: 30px;
 }
 
 @media (max-width: 992px) {
