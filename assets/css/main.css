@@ -32,7 +32,7 @@
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --contrast-color: #ffffff;
 
-  --brand-color: #F0B212;
+  --brand-color: #ffbc13;
   --link-color: #6d21d1;
   --gray-background-color: #f7f8f9;
 }
@@ -706,7 +706,8 @@ section,
   opacity: 0.7;
   font-weight: 500;
   font-size: 30px;
-  line-height: 0;
+  line-height: 10px;
+  letter-spacing: normal;
 }
 
 .hero h2 {
@@ -716,7 +717,7 @@ section,
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: #eee;
   margin: 5px 0 0 0;
   font-size: 20px;
 }
@@ -725,6 +726,7 @@ section,
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
   border-radius: 12px;
+  font-size: 18px;
 }
 
 .hero .icon-box b {
