@@ -35,6 +35,7 @@
   --brand-color: #ffbc13;
   --link-color: #6d21d1;
   --gray-background-color: #f7f8f9;
+  --accent-color: #4E2683;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -109,18 +110,20 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 20px 0;
+  background-color: #fbe8b9;
+  padding: 4px 0;
   transition: all 0.5s;
   z-index: 997;
 }
 
 .header .logo {
   line-height: 1;
+  padding-right: 18px;
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 20px;
+  margin-bottom: 5px;
   margin-right: 8px;
 }
 
@@ -157,7 +160,11 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-@media (max-width: 1200px) {
+.header a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
   .header .logo {
     order: 1;
   }
@@ -177,55 +184,28 @@ h6 {
   }
 }
 
-.scrolled .header {
+.header {
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-  --background-color: rgba(255, 255, 255, 0);
-  --heading-color: var(--brand-color);
-  --nav-color: rgba(255, 255, 255, 0.8);
-  --nav-hover-color: #ffffff;
-}
-
-.index-page .header img {
-  display: none;
-  transition: 0.3s;
-}
-
-.index-page .header img.gold {
-  display: inline;
-}
-
-/* Index Page Header on Scroll
-------------------------------*/
-.index-page.scrolled .header {
   --background-color: #ffffff;
   --heading-color: var(--accent-color);
   --nav-color: #3a3939;
   --nav-hover-color: #e84545;
 }
 
-.index-page.scrolled .header img {
+.index-page .header img {
   display: inline;
-  transition: 0.3s;
-}
-
-.index-page.scrolled .header img.gold {
-  display: none;
 }
 
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (min-width: 1200px) {
-  .navmenu {
-    padding: 0;
-  }
-
+@media (min-width: 768px) {
   .navmenu ul {
     margin: 0;
     padding: 0;
@@ -241,7 +221,7 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
+    padding: 10px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -329,7 +309,7 @@ h6 {
 }
 
 /* Navmenu - Mobile */
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -340,7 +320,7 @@ h6 {
   }
 
   .navmenu {
-    padding: 0;
+    padding: 2px;
     z-index: 9997;
   }
 
@@ -608,7 +588,7 @@ section,
   overflow: clip;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
 
   section,
   .section {
@@ -658,7 +638,7 @@ section,
 .hero {
   width: 100%;
   position: relative;
-  padding: 80px 0;
+  padding: 103px 0 56px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -685,7 +665,6 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-  margin-bottom: -30px;
 }
 
 .hero .vote p {
@@ -697,23 +676,11 @@ section,
   letter-spacing: .03em;
 }
 
-.hero .vote .name {
-  font-size: 40px;
+.hero h3 {
+  margin-top: 10px;
+  letter-spacing: 0.06em;
+  font-weight: 600;
   color: var(--brand-color);
-}
-
-.hero .vote .minor {
-  opacity: 0.7;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 10px;
-  letter-spacing: normal;
-}
-
-.hero h2 {
-  margin: 0;
-  font-size: 44px;
-  font-weight: 700;
 }
 
 .hero p {
@@ -724,9 +691,12 @@ section,
 
 .hero .icon-box {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
+  padding: 10px 20px 2px 20px;
   border-radius: 12px;
+  border: #ccc 1px solid;
   font-size: 18px;
+  max-width: 900px;
+  margin: 0 30px;
 }
 
 .hero .icon-box b {
@@ -739,14 +709,30 @@ section,
   margin-bottom: 0;
 }
 
+.hero div img {
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  max-height: 180px;
+  float: right;
+}
+
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
+  .hero {
+    padding: 76px 0 38px 0;
   }
 
-  .hero p {
-    font-size: 18px;
+  .hero div img {
+    float: none;
+    margin-top: 0;
   }
+}
+
+/*--------------------------------------------------------------
+# Stats Section
+--------------------------------------------------------------*/
+#stats {
+  padding-top: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -839,14 +825,15 @@ section,
 }
 
 .about .icon-box i {
-  width: 80px;
-  height: 80px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
-  font-size: 32px;
+  margin-bottom: 6px;
+  margin-right: 10px;
+  font-size: 18px;
   line-height: 0;
   transition: all 0.4s ease-out 0s;
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
@@ -865,7 +852,12 @@ section,
 
 .about .icon-boxes .col-md-6:nth-child(2) .icon-box,
 .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
-  margin-top: -30px;
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
+
+.source-top {
+  margin-top: -60px;
 }
 
 .source-bottom {
@@ -877,16 +869,11 @@ section,
   .about .icon-boxes .col-md-6:nth-child(2) .icon-box,
   .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   .about .icon-box {
-    padding: 20px 10px;
-  }
-
-  .about .icon-box i {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 12px;
+    padding: 20px;
   }
 
   .source-top {
@@ -926,22 +913,27 @@ section,
   background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
 }
 
-.features .features-item ul li {
+.features .features-item ul.positions li {
   padding-bottom: 10px;
   font-size: 14px;
   list-style: none;
   position: relative;
 }
 
-.features .features-item ul li::before {
-  content: "ⓘ";
+.features .features-item ul.positions li::before {
+  content: "→";
   position: absolute;
   left: -22px;
   color: var(--accent-color);
+  font-weight: bold;
 }
 
-.features .features-item ul li:last-child {
+.features .features-item ul.positions li:last-child {
   padding-bottom: 0;
+}
+
+.features .features-item ul.positions li b {
+  font-weight: 600;
 }
 
 .features .features-item img {
@@ -1083,39 +1075,32 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Endorsements Section
+# Candidates Section
 --------------------------------------------------------------*/
-section.endorsements {
-  background-color: var(--gray-background-color);
+section.candidates {
   padding-bottom: 0;
 }
 
-.endorsements .container {
+.candidates .container {
   padding: 18px;
 }
 
-.endorsements .content h3 {
-  font-weight: 400;
-  font-size: 32px;
-  color: #364146;
-}
-
-.endorsements .content ul {
+.candidates .content ul {
   list-style: none;
   padding: 0;
 }
 
-.endorsements .content ul li {
+.candidates .content ul li {
   padding-bottom: 10px;
 }
 
-.endorsements .content ul i {
+.candidates .content ul i {
   font-size: 20px;
   padding-right: 4px;
   color: var(--accent-color);
 }
 
-.endorsements .content p:last-child {
+.candidates .content p:last-child {
   margin-bottom: 0;
 }
 
@@ -1202,6 +1187,14 @@ section.endorsements {
 }
 
 /*--------------------------------------------------------------
+# About Us Section
+--------------------------------------------------------------*/
+
+#about {
+  background: linear-gradient(to bottom, #f9f9f9, white);
+}
+
+/*--------------------------------------------------------------
 # Get Involved Section
 --------------------------------------------------------------*/
 
@@ -1279,7 +1272,8 @@ section.endorsements {
   --bs-gutter-x: 6rem;
 }
 
-.source {
+.source,
+.note {
   font-size: smaller;
 }
 
