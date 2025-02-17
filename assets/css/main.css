@@ -110,10 +110,16 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background: linear-gradient(to bottom, white 0%, #fff8e5 90%, var(--brand-color) 100%);
+  background: linear-gradient(to bottom, white 0%, #fff5dc 90%, var(--brand-color) 100%);
   padding: 4px 0;
   transition: all 0.5s;
   z-index: 997;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header {
+    background: linear-gradient(to bottom, black 0%, #201702 90%, var(--brand-color) 100%);
+  }
 }
 
 .header .logo {
