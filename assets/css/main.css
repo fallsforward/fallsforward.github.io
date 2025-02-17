@@ -824,7 +824,7 @@ section,
 
 .about .icon-box {
   background-color: var(--surface-color);
-  padding: 30px 40px 40px 40px;
+  padding: 30px 40px 30px 40px;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   transition: all 0.3s ease-out 0s;
