@@ -116,7 +116,7 @@ h6 {
   z-index: 997;
 }
 
-@media (prefers-color-scheme: dark) {
+html[data-darkreader-mode="dynamic"] {
   .header {
     background: linear-gradient(to bottom, black 0%, #201702 90%, var(--brand-color) 100%);
   }
