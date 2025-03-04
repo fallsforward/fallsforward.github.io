@@ -170,7 +170,7 @@ html[data-darkreader-mode="dynamic"] {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header .logo {
     order: 1;
   }
@@ -532,7 +532,7 @@ html[data-darkreader-mode="dynamic"] {
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
@@ -644,7 +644,6 @@ section,
 .hero {
   width: 100%;
   position: relative;
-  padding: 103px 0 56px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -668,70 +667,40 @@ section,
   z-index: 2;
 }
 
-.hero .container {
+.hero .box {
   position: relative;
   z-index: 3;
+  font-size: 18px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 20em;
+  border-radius: 12px;
+  border: #ccc 1px solid;
+  margin: 68px 26px 26px 26px;
 }
 
-.hero .vote p {
-  margin: 0 0 20px 0;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 42px;
-  font-family: var(--default-font);
-  letter-spacing: .03em;
-}
-
-.hero h3 {
-  margin-top: 10px;
-  letter-spacing: 0.06em;
+.hero h2 {
+  margin: 1ex;
   font-weight: 600;
   color: var(--brand-color);
 }
 
+.hero h3 {
+  font-family: var(--default-font);
+  font-size: 18px;
+  font-weight: bold;
+  margin: 1em 1ex 0.5ex 1ex;
+}
+
 .hero p {
   color: #eee;
-  margin: 5px 0 0 0;
-  font-size: 20px;
-}
-
-.hero .icon-box {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px 2px 20px;
-  border-radius: 12px;
-  border: #ccc 1px solid;
-  font-size: 18px;
-  max-width: 900px;
-  margin: 0 30px;
-}
-
-.hero .icon-box b {
-  font-size: 20px;
-  color: white;
-}
-
-.hero .icon-box h5 {
-  margin-top: 15px;
-  margin-bottom: 0;
+  font-size: 16px;
+  margin: 0.5ex 1ex;
 }
 
 .hero div img {
-  border-radius: 12px;
-  margin-top: 10px;
-  margin-bottom: 18px;
-  max-height: 180px;
-  float: right;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 76px 0 38px 0;
-  }
-
-  .hero div img {
-    float: none;
-    margin-top: 0;
-  }
+  margin-top: 1em;
+  border-radius: 0 0 12px 12px;
 }
 
 /*--------------------------------------------------------------
@@ -871,7 +840,7 @@ section,
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   .about .icon-boxes .col-md-6:nth-child(2) .icon-box,
   .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
