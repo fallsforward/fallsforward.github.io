@@ -711,6 +711,24 @@ section,
   padding-bottom: 0;
 }
 
+#stats .source-bottom {
+  margin-left: 24px;
+  margin-top: -10px;
+  padding-bottom: 30px;
+}
+
+#stats h3 {
+  text-wrap: nowrap;
+  overflow-x: auto;
+}
+
+#stats h3 b {
+  font-weight: normal;
+  font-size: 20px;
+  position: relative;
+  top: -2px;
+}
+
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
