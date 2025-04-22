@@ -584,6 +584,10 @@ html[data-darkreader-mode="dynamic"] {
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
+.main {
+  margin-top: 40px;
+}
+
 section,
 .section {
   color: var(--default-color);
@@ -675,7 +679,7 @@ section,
   max-width: 20em;
   border-radius: 12px;
   border: #ccc 1px solid;
-  margin: 68px 26px 26px 26px;
+  margin: 36px 26px 26px;
 }
 
 .hero h2 {
